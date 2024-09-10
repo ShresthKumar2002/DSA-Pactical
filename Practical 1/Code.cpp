@@ -30,15 +30,12 @@ void cdia(int a)
             arr[i][j]='*';
             j=j+2;
         }
+        strcpy(arr[t-i+1],arr[i]);
     }
     for(int j=0;j<t;j=j+2)
         {
             arr[a][j]='*';
         }
-    for(int i=a+1; i<=t;i++)
-    {
-        strcpy(arr[i],arr[t-i+1]);
-    }
     for(int i=0; i<=t;i++)
     {
         for(int j=0; j<t;j++)

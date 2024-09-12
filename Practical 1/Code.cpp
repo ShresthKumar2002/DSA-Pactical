@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void cdia(int a);   //Creating a declaration for the function to apply the operation.
+void cdia(int a);   //1
 
 int main()
 {
@@ -10,13 +10,13 @@ int main()
     cin>>a;
     if(a>=2)
     {
-        cdia(a);  //Function Call
+        cdia(a);  //2
         return 0;
     }
     else
     {
         cout<<"Invalid input\n";
-        goto RETRY;  //Reset
+        goto RETRY;  //3
     }
 }
 
@@ -25,7 +25,7 @@ void cdia(int a)
     int t=2*a-1;
     char arr[30][30];
     
-    // A loop to set the 2D array for the Diamond
+    //4
     for(int i=0; i<=t;i++)
     {
         for(int j=0; j<t;j++)
@@ -34,23 +34,23 @@ void cdia(int a)
         }
     }
 
-    // A Loop to parse from 1st row to n-1 th row
+    //5
     for(int i=0; i<=a;i++)
     {
         if(i!=a)
         {
-            // A loop to add stars as per the row number
+            //6
             for(int j=a-i;j<a+i;)
             {
               arr[i][j]='*';
               j=j+2;
             }
         
-            strcpy(arr[t-i+1],arr[i]);  // Copying the i th row from the top in the i th row from bottom
+            strcpy(arr[t-i+1],arr[i]);  //7
         }
         else
         {
-            // A loop to print the center row 
+            //8
             for(int j=0;j<t;j=j+2)
             {
                 arr[a][j]='*';
@@ -59,7 +59,7 @@ void cdia(int a)
 
     }
 
-    // Loop to print the Matrix
+    //9
     for(int i=0; i<=t;i++)
     {
         for(int j=0; j<t;j++)
